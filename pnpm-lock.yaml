@@ -69,6 +69,9 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.2.2(vite@6.4.2(jiti@2.6.1)(lightningcss@1.32.0)(stylus@0.57.0)(yaml@2.8.3))
+      '@types/js-cookie':
+        specifier: ^3.0.6
+        version: 3.0.6
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
         version: 5.2.4(vite@6.4.2(jiti@2.6.1)(lightningcss@1.32.0)(stylus@0.57.0)(yaml@2.8.3))(vue@3.5.32(typescript@5.9.3))
@@ -947,6 +950,9 @@ packages:
 
   '@types/geojson@7946.0.16':
     resolution: {integrity: sha512-6C8nqWur3j98U6+lXDfTUWIfgvZU+EumvpHKcYjujKH7woYyLj2sUmff0tRhrqM7BohUw7Pz3ZB1jj2gW9Fvmg==, tarball: https://registry.npmjs.org/@types/geojson/-/geojson-7946.0.16.tgz}
+
+  '@types/js-cookie@3.0.6':
+    resolution: {integrity: sha512-wkw9yd1kEXOPnvEeEV1Go1MmxtBJL0RR79aOTAApecWFVu7w0NNXNqhcWgvw2YgZDYadliXkl14pa3WXw5jlCQ==, tarball: https://registry.npmjs.org/@types/js-cookie/-/js-cookie-3.0.6.tgz}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==, tarball: https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.15.tgz}
@@ -3991,6 +3997,8 @@ snapshots:
   '@types/estree@1.0.8': {}
 
   '@types/geojson@7946.0.16': {}
+
+  '@types/js-cookie@3.0.6': {}
 
   '@types/json-schema@7.0.15': {}
 
