@@ -10,16 +10,13 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { LogIn, LogOut, Settings, User } from "lucide-vue-next";
+import { LogOut, Settings, User } from "lucide-vue-next";
 import ProductList from "@/components/ProductList.vue";
 import ModeToogle from "@/components/ModeToogle.vue";
 import { Separator } from "@/components/ui/separator";
+import { useAuthStore } from "@/store/userAuthStore";
 
-const isLoggedIn = ref(false);
-
-const authUser = () => {
-  isLoggedIn.value = true;
-};
+const authStore = useAuthStore();
 </script>
 
 <template>
@@ -44,13 +41,7 @@ const authUser = () => {
         <ModeToogle />
         <Separator orientation="vertical" />
 
-        <div v-if="!isLoggedIn">
-          <Button @click="authUser" variant="ghost">
-            <LogIn class="mr-2" />
-            Login
-          </Button>
-        </div>
-        <DropdownMenu v-else>
+        <DropdownMenu>
           <DropdownMenuTrigger as-child>
             <Avatar class="h-8 w-8">
               <AvatarImage src="https://github.com/shadcn.png" />
@@ -69,7 +60,7 @@ const authUser = () => {
               Configuración
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem @click="authStore.logout">
               <LogOut class="mr-2" />
               Cerrar Sesión
             </DropdownMenuItem>
